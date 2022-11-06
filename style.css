@@ -1,0 +1,747 @@
+/* MOBILE FIRST */
+
+/* Fonts
+  font-family: "Montserrat", sans-serif;
+  font-family: 'Roboto', sans-serif;
+
+*/
+
+/* Photo by <a href="https://unsplash.com/@ebuenclemente205?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ebuen Clemente Jr</a> on <a href="https://unsplash.com/@ebuenclemente205?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+/*
+
+/* SETUP */
+:root {
+  --clr-bg-900: #080808;
+  --clr-bg-800: #991919;
+  --clr-bg-700: #bd0401;
+  --clr-bg-650: #ff0000;
+  --clr-bg-600: #c83484;
+  --clr-bg-500: #4267B2;
+  --clr-bg-550: #03a9f4;
+  --clr-bg-400: #10f4e4;
+  --clr-bg-300: #484548;
+  --clr-bg-200: #898787;
+  --clr-bg-100: #ffffff;
+  --clr-accent: #a59678;
+}
+
+*, 
+*::before, 
+*::after {
+  box-sizing: border-box;
+}
+
+/* UTILITY CLASS */
+.txt-clr-acc {
+  color: var(--clr-accent);
+}
+
+.txt-clr-red {
+  color: var(--clr-bg-700);
+}
+
+.txt-clr-dark {
+  color: var(--clr-bg-300);
+}
+
+.txt-clr-darker {
+  color: var(--clr-bg-900);
+}
+.txt-clr-light {
+  color: var(--clr-bg-200);
+}
+
+.txt-clr-lightest {
+  color: var(--clr-bg-100);
+}
+
+.bg-clr-900 {
+  background-color: var(--clr-bg-900);
+}
+.bg-clr-800 {
+  background-color: var(--clr-bg-800);
+}
+.bg-clr-400 {
+  background-color: var(--clr-bg-400);
+}
+.bg-clr-300 {
+  background-color: var(--clr-bg-300);
+}
+.bg-clr-200 {
+  background-color: var(--clr-bg-200);
+}
+.bg-clr-100 {
+  background-color: var(--clr-bg-100);
+}
+.bg-clr-acc {
+  background-color: var(--clr-accent);
+}
+
+/* CONTAINER */
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3rem;
+}
+
+.container {
+  width: 85%;
+  max-width: 1100px;
+  height: auto;
+  margin: 0 auto;
+  background-color: transparent;
+}
+
+.container--header {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  /* added for nav-toggle positioning */
+  position: relative;
+}
+
+#media__links__large, 
+#mailing__form,
+#media__links__small,
+#concerts,
+#contact__form {
+  padding: 3em 0;
+}
+
+#bio__one {
+  padding-top: 3em;
+
+}
+#bio__two {
+  padding: 3em 0;
+}
+
+/* TYPOGRAPHY */
+
+img {
+  max-width: 100%;
+  height: auto;
+} 
+
+
+.text__center {
+  text-align: center;
+  width: 100%;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.section__title {
+  font-size: 2rem;
+}
+
+.section-title--dark {
+  color: var(--clr-bg-900)
+}
+
+
+.p_b_1 {
+  padding-bottom: 1em;
+}
+
+.p_b_2 {
+  padding-bottom: 2em;
+}
+
+p {
+  line-height: 1.3;
+}
+/* MAIN BACKGROUNDS */
+
+
+
+/* HEADER IMG */
+
+.header__img {
+  background-color: #eee;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  height: 70vh;;
+  clip-path: polygon(100% 0, 100% 85%, 50% 100%, 0 85%, 0 0);
+  animation: image 10s infinite alternate;
+  
+}
+  @keyframes image {
+    0% {
+      background-image: url('https://assets.codepen.io/5760928/DSC_2402.JPG');
+    }
+    100% {
+      background-image: url('https://assets.codepen.io/5760928/ebuen-clemente-jr-H5Iw3Xz0vxM-unsplash.jpg');
+    }
+}
+
+/* NAV */
+
+.nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.25rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em 0;
+}
+
+.nav__link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--clr-bg-100);
+  font-weight: 500;
+  background-color: var(none);
+  padding: 0.25em 0.75em;
+  border-radius: 100px;
+}
+
+.nav__link:focus{
+  outline: 10px solid var(--clr-bg-100);
+
+}
+
+.nav__link:hover {
+  outline: 2px solid var(--clr-bg-100);
+}
+
+.nav__item {
+  padding: 0.5em 0;
+}
+
+.nav-toggle {
+  cursor: pointer;
+  border: 0;
+  width: 3em;
+  height: 3em;
+  padding: 0;
+  margin: 0.5em;
+  border-radius: 50%;
+  background: transparent;
+  color: white;
+  transition: opacity 250ms ease;
+  position: absolute;
+  left: 0;
+  z-index: 100;
+}
+
+.nav-toggle:focus,
+.nav-toggle:hover {
+  opacity: .75;
+  outline: 2px solid var(--clr-bg-100);
+}
+
+
+.nav {
+  visibility: hidden;
+  height: 0;
+  position: absolute;
+   
+}
+
+.nav--visible {
+  visibility: visible;
+  height: auto;
+  position: relative;
+} 
+
+/* BUTTONS */
+
+.nav__link--button {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase; 
+  color: var(--clr-bg-300);
+  font-weight: 500;
+  background-color: var(--clr-bg-100);
+  padding: 0.25em 0.75em;
+  border-radius: 100px;
+}
+
+.nav__link--button:focus{
+  outline: 10px solid var(--clr-bg-100);
+
+}
+
+.nav__link--button:hover {
+  outline: 2px solid var(--clr-bg-100);
+}
+
+
+.ticket__button {
+  width: 100%;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase; 
+  color: var(--clr-bg-900);
+  font-weight: 500;
+  background-color: var(--clr-bg-100);
+  padding: 0.25em 4em;
+  border-radius: 5px;
+}
+
+.ticket__button:hover {
+  opacity: 0.9;
+  outline: 3px solid var(--clr-bg-300);
+}
+
+.nav__link:hover,
+.nav__link:focus,
+button:hover,
+button:focus {
+  opacity: 0.9;
+}
+
+/* HAMBURGER STUFF */
+
+.hamburger {
+  width: 50%;
+  position: relative;
+  z-index: 100;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  display: block;
+  margin: 0 auto;
+  height: 3px;
+  background: white;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  width: 100%;
+}
+
+.hamburger::before {
+  transform: translateY(-6px);
+}
+
+.hamburger::after {
+  transform: translateY(3px);
+}
+
+/* HERO */
+
+.hero {
+  padding: 6em 0;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  text-align: center;
+}
+
+.hero__text {
+ text-transform: uppercase;
+ margin: 0;
+ font-size: 1rem;
+ letter-spacing: 5px;
+ color: var(--clr-bg-100);
+}
+
+.hero__title {
+  margin: 0;
+  font-size: 3rem;
+   font-weight: 700;
+   color: var(--clr-accent);
+ }
+
+.hero {
+  visibility: visible;
+
+}
+
+.hero--hidden {
+  visibility: hidden;
+} 
+
+
+ /*MEDIA LINKS LARGE/ SMALL*/
+
+
+.media__list {
+  margin-top: 1em;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; 
+}
+
+.media__item + .media__item {
+padding-left: 2em;
+}
+
+.icon-small {
+  width: 32px;
+  height: auto;
+}
+
+.icon--large {
+  width: 64px;
+  height: auto;
+}
+
+.instagram :hover,
+.instagram-round :hover  {
+  outline: 5px solid var(--clr-bg-600);
+  padding: 5px;
+  border-radius: 15px;
+}
+
+.facebook :hover,
+.facebook-round :hover {
+  outline: 5px solid var(--clr-bg-500);
+  padding: 5px;
+  border-radius: 15px;
+}
+
+.tiktok :hover {
+  outline: 5px solid var(--clr-bg-400);
+  padding: 5px;
+  border-radius: 15px;
+}
+
+.twitter :hover {
+  outline: 5px solid var(--clr-bg-550);
+  padding: 5px;
+  border-radius: 15px;
+}
+
+.youtube :hover {
+  outline: 5px solid var(--clr-bg-650);
+  padding: 5px;
+  border-radius: 15px;
+}
+
+/* NEWSLETTER */
+
+#mailing__form {
+text-align: center;
+}
+
+.subscribe__form {
+  margin: 0 auto;
+  background: var(--clr-bg-100);
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 300px;
+  box-shadow: 0 50px 50px -30px var(--clr-accent);
+}
+
+.name__form,
+.email__form {
+  min-width: 200px;
+  max-width: 250px;
+  height: 40px;
+  padding: 0.75em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 12px;
+  border-color: var(--clr-bg-200);
+}  
+
+.name__form:hover,
+.email__form:hover, 
+.message__form:hover {
+  outline: 3px solid var(--clr-bg-200);
+}
+
+.subscribe {
+  height: 40px;
+  width: 150px;
+  text-decoration: none;
+  text-transform: uppercase; 
+  color: var(--clr-bg-300);
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: var(--clr-accent);
+  padding: 0.25em 0.75em;
+  border-radius: 12px;
+  border: none;
+}
+
+input[type=submit]:hover {
+  opacity: 0.8;
+}
+
+.form + .form {
+  padding-top: 1em;
+}
+
+
+
+/* ABOUT */
+
+.bio_text {
+  font-size: 1rem;
+}
+
+.bio__img__one,
+.bio__img__two {
+  box-shadow: 0 50px 50px -30px var(--clr-accent);
+  border-top-right-radius: 25%;
+}
+
+.bio__img__two {
+  margin-bottom: 20px;
+}
+
+/* PERFORMANCE */
+
+
+/* perform_style.css due to conflict with container div */
+
+
+
+/* CONCERTs */
+
+.concert__title {
+  font-size: 1rem;
+  display:block;
+  padding: 0 0 10px 10px;
+  width: 100%;
+  color: var(--clr-bg-300);
+}
+
+.concert__link {
+  text-decoration: none;
+  text-transform: uppercase; 
+  font-size: 1rem;
+  color: var(--clr-bg-300);
+}
+
+.event {
+  padding: 10px;
+  border-top: 1px solid var(--clr-bg-200);
+  border-bottom: 1px solid var(--clr-bg-200);
+  width: 100%;
+}
+
+.concert__info {
+  display: block;
+  color: var(--clr-bg-200);
+}
+
+.concert__info {
+  margin: 0;
+}
+
+.concert__info--date {
+  font-weight: 700;
+  padding-bottom: 5px;
+}
+
+.concert__info--city {
+  padding-bottom: 5px;
+}
+
+
+/* CONTACT FORM */
+
+ 
+#contact__form {
+  margin: 0 auto;
+  background: var(--clr-bg-100);
+  border-radius: 12px;
+  padding: 30px;
+  min-width: 268px;
+  max-width: 500px;
+  box-shadow: 0 50px 50px -30px var(--clr-accent);
+}
+
+.ct__form + .ct__form {
+  margin-top: 1em;
+}
+
+.ct__name__form,
+.ct__email__form {
+  text-align: left;
+  min-width: 220px;
+  max-width: 250px;
+  height: 40px;
+  padding: 0.75em;
+  display: block;
+  border-radius: 12px;
+  border-color: var(--clr-bg-200);
+}
+
+.ct__message__form {
+  margin: 0 auto;
+  width:100%;
+  min-width: 220px;
+  height: 300px;
+  padding: 0.75em;
+  display: block;
+  border-radius: 12px;
+  border-color: var(--clr-bg-200);
+
+}
+
+.ct__submit {
+  height: 40px;
+  width: 150px;
+  text-decoration: none;
+  text-transform: uppercase; 
+  color: var(--clr-bg-300);
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: var(--clr-accent);
+  padding: 0.25em 0.75em;
+  border-radius: 12px;
+  border: none;
+}
+
+/* FOOTER */
+
+footer {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  margin-top: 2em;
+}
+
+.legal__text {
+  margin-bottom: 14px;
+}
+
+@media (min-width: 440px) {
+
+  .ticket__button {
+    width: fit-content;
+  }
+
+  .event {
+    display: flex;
+    justify-content: space-between;
+    
+  }
+
+  .concert__info--venue {
+    flex-shrink: 1;
+  }
+
+}
+
+
+
+@media (min-width: 800px) {
+
+
+  .container--header {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+
+  }
+
+  .nav-toggle {
+      display: none;
+  }
+
+  .nav {
+      width: 100%;
+      height: auto;
+      visibility: visible;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+  }
+
+  .nav__list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: row; 
+  }
+
+  .nav__item {
+      margin: 0 0 0 1.5em;
+  }
+
+  .row {
+      display: flex;
+  }
+
+  .hero {
+    width: 100%;
+    justify-content: center;
+    padding: 6em;
+  }
+
+  .media__item + .media__item {
+    padding-left: 3em;
+    }
+
+  /*.subscribe__forms {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+  }*/
+
+  .col_bio {
+    width: 100%;
+  }
+
+  .col_bio + .col_bio {
+    margin-left: 4em;
+  }
+
+  .bio__img__two {
+    margin-bottom: none;
+  }
+
+  .concert__link {
+    display: flex;
+    flex-wrap: wrap;
+     
+  }
+
+  .concert__info--date {
+    flex-shrink: 0;
+    width: 100%;
+  }
+
+  .concert__info--venue {
+    flex-grow: 2;
+     
+  }
+
+  .concert__info--city {
+    flex-grow: 1;
+     
+  }
+
+  .concert__info {
+    padding-bottom: 0;
+    
+  }
+
+  .event {
+    align-items: center;
+  }
+
+  
+
+}
+  
