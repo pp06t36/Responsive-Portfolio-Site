@@ -19,15 +19,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 
 $customer = [
-    'name' => isset($_POST['name']) ? $_POST['name'] : NULL,
-    'email' => isset($_POST['email']) ? $_POST['email'] : NULL,
+    'name' => isset($name) ? $name : NULL,
+    'email' => isset($email) ? $email : NULL,
     'created_at' => date("Y-m-d"), 
 ];
 
 if(!$entryErr) {
     // Connect to database
       try {
-          $db = new PDO('mysql:LOCALHOST;dbname=DBNAME', '/', '/');
+          $db = new PDO('mysql:host=localhost;dbname=DBNAME', '/', '/');
   
           
           $db->prepare("
